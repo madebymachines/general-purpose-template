@@ -126,6 +126,7 @@ RUN git clone https://github.com/d8ahazard/sd_dreambooth_extension.git extension
     git clone --depth=1 https://github.com/civitai/sd_civitai_extension.git extensions/sd_civitai_extension && \
     git clone --depth=1 https://github.com/BlafKing/sd-civitai-browser-plus.git extensions/sd-civitai-browser-plus
 
+    
 # Install dependencies for Deforum, ControlNet, ReActor, Infinite Image Browsing,
 # After Detailer, and CivitAI Browser+ extensions
 RUN source /venv/bin/activate && \
