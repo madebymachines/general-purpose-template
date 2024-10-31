@@ -80,9 +80,9 @@ RUN mkdir -p /sd-models
 
 # Add SDXL models and VAE
 # These need to already have been downloaded:
-    wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
-    wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
-    wget https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.safetensors
+RUN wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors -P /sd-models/ && \
+    wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors -P /sd-models/ && \
+    wget https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.safetensors -P /sd-models/
 COPY sd_xl_base_1.0.safetensors sd_xl_refiner_1.0.safetensors sdxl_vae.safetensors /sd-models/
 
 # Clone the git repo of the Stable Diffusion Web UI by Automatic1111
