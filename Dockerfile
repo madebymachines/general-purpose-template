@@ -442,6 +442,15 @@ RUN git clone https://github.com/cubiq/ComfyUI_IPAdapter_plus.git custom_nodes/C
     pip3 cache purge && \
     deactivate
 
+# Install ComfyUI Flux Replicate API
+RUN git clone https://github.com/smlbiobot/ComfyUI-Flux-Replicate-API.git custom_nodes/ComfyUI_Flux_Replicate_API && \
+    cd custom_nodes/ComfyUI_Flux_Replicate_API && \
+    source /ComfyUI/venv/bin/activate && \
+    pip3 install . && \
+    pip3 cache purge && \
+    deactivate
+
+
 RUN source /ComfyUI/venv/bin/activate && \
     pip3 install --no-cache-dir torch==${TORCH_VERSION} torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121 && \
     pip3 install --no-cache-dir xformers==${XFORMERS_VERSION} && \
