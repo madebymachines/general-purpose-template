@@ -497,6 +497,7 @@ RUN wget -O lcm-lora-sdv1-5.safetensors https://huggingface.co/latent-consistenc
 WORKDIR /ComfyUI/models/vae
 RUN wget -O vae-ft-mse-840000-ema-pruned.ckpt https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt
 
+# Mengunduh Animatediff Models
 WORKDIR /ComfyUI/models/animatediff_models
 RUN wget -O mm_sd_v14.ckpt https://huggingface.co/guoyww/animatediff/resolve/cd71ae134a27ec6008b968d6419952b0c0494cf2/mm_sd_v14.ckpt && \
     wget -O mm_sd_v15.ckpt https://huggingface.co/guoyww/animatediff/resolve/cd71ae134a27ec6008b968d6419952b0c0494cf2/mm_sd_v15.ckpt && \
@@ -508,6 +509,7 @@ RUN wget -O mm_sd_v14.ckpt https://huggingface.co/guoyww/animatediff/resolve/cd7
     wget -O mm-p_0.75.pth https://huggingface.co/manshoety/beta_testing_models/resolve/main/mm-p_0.75.pth && \
     wget -O temporaldiff-v1-animatediff.ckpt https://huggingface.co/CiaraRowles/TemporalDiff/resolve/main/temporaldiff-v1-animatediff.ckpt && \
     wget -O temporaldiff-v1-animatediff.safetensors https://huggingface.co/CiaraRowles/TemporalDiff/resolve/main/temporaldiff-v1-animatediff.safetensors
+
 
 WORKDIR /ComfyUI/models/checkpoints
 RUN wget -O dreamshaper_8.safetensors https://civitai.com/api/download/models/128713?type=Model&format=SafeTensor&size=pruned&fp=fp16 && \
@@ -543,6 +545,8 @@ RUN wget -O ip-adapter-faceid-plusv2_sd15.bin https://huggingface.co/h94/IP-Adap
     wget -O ip_plus_composition_sd15.safetensors https://huggingface.co/ostris/ip-composition-adapter/resolve/main/ip_plus_composition_sd15.safetensors && \
     wget -O ip-adapter_sd15_vit-G.safetensors https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter_sd15_vit-G.safetensors && \
     wget -O ip-adapter_sd15_vit-G.bin https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter_sd15_vit-G.bin
+
+    
 # Download Insightface models
 WORKDIR /ComfyUI/models/insightface
 RUN wget -O inswapper_128.onnx https://huggingface.co/ezioruan/inswapper_128.onnx/resolve/main/inswapper_128.onnx && \
